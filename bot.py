@@ -12,10 +12,6 @@ async def on_ready():
 
 guild_ids = [595824909473808403]
 
-# @slash.slash(name='ping', description="작동 확인")
-# async def _ping(ctx):
-#     await ctx.send(f"Pong! ({client.latency*1000}ms)")
-
 @slash.slash(name="우리핵안무", description="디시콘을 보내줌", guild_ids=guild_ids)
 async def 우리핵안무(ctx):
     embed=discord.Embed(description="우리핵안무", color=0xFFFFFF)
