@@ -241,21 +241,21 @@ async def test(ctx, 상표명: str):
                     choices=[
                         create_choice(
                             name="디자이너",
-                            value="특디자이너"
+                            value="디자이너특"
                         ),
                         create_choice(
                             name="CSS",
-                            value="특CSS"
+                            value="CSS특"
                         )
                     ]
                 )
             ])
 async def test(ctx, 내용: str):
-    if 내용 == "디자이너":
+    if 내용 == "디자이너특":
             embed=discord.Embed(description="디자이너특", color=0x4ac8c7)
             embed.set_image(url="https://i.ibb.co/JcncbDj/elwkdlsjxmr.gif")
             await ctx.send(embed=embed)
-    elif 내용 == "CSS":
+    elif 내용 == "CSS특":
             embed=discord.Embed(description="CSS특", color=0x4ac8c7)
             embed.set_image(url="https://i.ibb.co/6Js7Mty/CSSxmr.gif")
             await ctx.send(embed=embed)
