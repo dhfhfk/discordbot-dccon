@@ -54,7 +54,7 @@ async def test(ctx, 내용: str):
 
     elif 내용 == "우리핵안녕":
         embed=discord.Embed(description="우리핵안녕", color=0xFFFFFF)
-        embed.set_image(url="https://i.ibb.co/WcnF8tC/dnflgordksrud.gif")
+        embed.set_image(url="https://i.ibb.co/RgfHT8J/dnflgordkssud.gif")
         await ctx.send(embed=embed)
         
 
