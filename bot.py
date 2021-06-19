@@ -244,6 +244,10 @@ async def test(ctx, 상표명: str):
                             value="디자이너특"
                         ),
                         create_choice(
+                            name="디자이너",
+                            value="디자이너특2"
+                        ),
+                        create_choice(
                             name="CSS",
                             value="CSS특"
                         ),
@@ -258,6 +262,10 @@ async def test(ctx, 내용: str):
     if 내용 == "디자이너특":
             embed=discord.Embed(description="디자이너특", color=0x4ac8c7)
             embed.set_image(url="https://i.ibb.co/JcncbDj/elwkdlsjxmr.gif")
+            await ctx.send(embed=embed)
+    elif 내용 == "디자이너특2":
+            embed=discord.Embed(description="디자이너특2", color=0x4ac8c7)
+            embed.set_image(url="https://i.ibb.co/9n6x4hQ/elwkdlsjxmr2.png")
             await ctx.send(embed=embed)
     elif 내용 == "CSS특":
             embed=discord.Embed(description="CSS특", color=0x4ac8c7)
@@ -1474,6 +1482,37 @@ async def 말잇못(ctx):
     embed=discord.Embed(description="말잇못", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/3dK37QD/akfdltaht.png")
     await ctx.send(embed=embed)
+
+@slash.slash(name="이게왜안돼", description=" ", guild_ids=guild_ids)
+async def 이게왜안돼(ctx):
+    embed=discord.Embed(description="이게왜안돼", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/Qd4t38b/dlrpdhodkseho.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="이게왜돼", description=" ", guild_ids=guild_ids)
+async def 이게왜돼(ctx):
+    embed=discord.Embed(description="이게왜돼", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/cY93zvv/dlrpdhoeho.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="답없음", description=" ", guild_ids=guild_ids)
+async def 답없음(ctx):
+    embed=discord.Embed(description="답없음", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/Byt2jMQ/ekqdjqtdma.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="진짜최종", description=" ", guild_ids=guild_ids)
+async def 진짜최종(ctx):
+    embed=discord.Embed(description="진짜최종", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/rGfhGgH/wls-Wkchlwhd.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="맞다저장", description=" ", guild_ids=guild_ids)
+async def 맞다저장(ctx):
+    embed=discord.Embed(description="맞다저장", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/JrqY6bB/akwekwjwkd.png")
+    await ctx.send(embed=embed)
+
     
 
 client.run(os.environ['token'])
