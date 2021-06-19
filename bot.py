@@ -1543,5 +1543,10 @@ async def 업데이트(ctx):
     embed.set_image(url="https://i.ibb.co/X33gMTY/djqepdlxm.png")
     await ctx.send(embed=embed)
 
+@slash.slash(name="포맷", description=" ", guild_ids=guild_ids)
+async def 포맷(ctx):
+    embed=discord.Embed(description="포맷", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/tbgHz23/akqjqdmlaudfuddj.png")
+    await ctx.send(embed=embed)
 
 client.run(os.environ['token'])
