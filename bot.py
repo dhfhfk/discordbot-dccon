@@ -224,6 +224,10 @@ async def test(ctx, 상표명: str):
         embed=discord.Embed(description="레인보우식스시즈", color=0x4ac8c7)
         embed.set_image(url="https://i.ibb.co/X8wFW3q/fpdlsqhdntlrtmtlwm.png")
         await ctx.send(embed=embed)
+    elif 상표명 == "마인크래프트":
+        embed=discord.Embed(description="마인크래프트", color=0x4ac8c7)
+        embed.set_image(url="https://i.ibb.co/VM3Fm3W/akdlszmfovmxm.png")
+        await ctx.send(embed=embed)
 
 @slash.slash(name="앵무", 
             description="앵무 디시콘 목록",
