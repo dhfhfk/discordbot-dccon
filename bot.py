@@ -1296,13 +1296,7 @@ async def 의도된(ctx):
     embed=discord.Embed(description="의도된", color=0x789ce8)
     embed.set_image(url="https://i.ibb.co/yRdYyFv/dmlehehls.gif")
     await ctx.send(embed=embed)
-    
-@slash.slash(name="불편", description="디시콘을 보내줌", guild_ids=guild_ids)
-async def 불편(ctx):
-    embed=discord.Embed(description="불편", color=0x789ce8)
-    embed.set_image(url="https://i.ibb.co/2ymLSLf/qnfvus.png")
-    await ctx.send(embed=embed)
-    
+
 @slash.slash(name="꼬우면", description="디시콘을 보내줌", guild_ids=guild_ids)
 async def 꼬우면(ctx):
     embed=discord.Embed(description="꼬우면", color=0x789ce8)
