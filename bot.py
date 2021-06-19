@@ -10,7 +10,7 @@ slash = SlashCommand(client, sync_commands=True)
 async def on_ready():
     print("준비된!")
 
-guild_ids = [595824909473808403]
+guild_ids = [367303729566711808, 595824909473808403,]
 
 
 @slash.slash(name="우리핵", 
