@@ -244,7 +244,7 @@ async def test(ctx, 상표명: str):
                             value="디자이너특"
                         ),
                         create_choice(
-                            name="디자이너",
+                            name="디자이너2",
                             value="디자이너특2"
                         ),
                         create_choice(
