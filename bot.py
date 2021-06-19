@@ -152,6 +152,18 @@ async def test(ctx, 내용: str):
                             name="레인보우식스시즈",
                             value="레인보우식스시즈"
                         ),
+                        create_choice(
+                            name="교육부",
+                            value="교육부"
+                        ),
+                        create_choice(
+                            name="삼성",
+                            value="삼성"
+                        ),
+                        create_choice(
+                            name="씽큐",
+                            value="씽큐"
+                        )
                     ]
                 )
             ])
@@ -166,7 +178,7 @@ async def test(ctx, 상표명: str):
         await ctx.send(embed=embed)
     elif 상표명 == "깃헙":
         embed=discord.Embed(description="깃헙", color=0x4ac8c7)
-        embed.set_image(url="https://i.ibb.co/M1Vnnpw/rltgjqm.png")
+        embed.set_image(url="https://i.ibb.co/6B6yDjF/rltgjqm.png")
         await ctx.send(embed=embed)
     elif 상표명 == "븩스븨":
         embed=discord.Embed(description="븩스븨", color=0x4ac8c7)
@@ -228,6 +240,18 @@ async def test(ctx, 상표명: str):
         embed=discord.Embed(description="마인크래프트", color=0x4ac8c7)
         embed.set_image(url="https://i.ibb.co/VM3Fm3W/akdlszmfovmxm.png")
         await ctx.send(embed=embed)
+    elif 상표명 == "교육부":
+        embed=discord.Embed(description="교육부", color=0x4ac8c7)
+        embed.set_image(url="https://i.ibb.co/Qf6MD1X/rydbrqn.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "삼성":
+            embed=discord.Embed(description="삼성", color=0x4ac8c7)
+            embed.set_image(url="https://i.ibb.co/zxt3TFK/tkatjd.png")
+            await ctx.send(embed=embed)
+    elif 상표명 == "씽큐":
+            embed=discord.Embed(description="씽큐", color=0x4ac8c7)
+            embed.set_image(url="https://i.ibb.co/s1mbysr/Tldzb.png")
+            await ctx.send(embed=embed)
 
 @slash.slash(name="특", 
             description="📁 개발자특 바쁨",
@@ -1130,7 +1154,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
     elif 내용 == "제리끄덕":
         embed=discord.Embed(description="제리끄덕", color=0x4ac8c7)
-        embed.set_image(url="https://i.ibb.co/5rNjbsz/wpflRmejr.gif")
+        embed.set_image(url="https://i.ibb.co/dL00Xk6/wpfl-Rmejr.gif")
         await ctx.send(embed=embed)
     elif 내용 == "제리인사":
         embed=discord.Embed(description="제리인사", color=0x4ac8c7)
@@ -1513,6 +1537,11 @@ async def 맞다저장(ctx):
     embed.set_image(url="https://i.ibb.co/JrqY6bB/akwekwjwkd.png")
     await ctx.send(embed=embed)
 
-    
+@slash.slash(name="업데이트", description=" ", guild_ids=guild_ids)
+async def 업데이트(ctx):
+    embed=discord.Embed(description="업데이트", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/X33gMTY/djqepdlxm.png")
+    await ctx.send(embed=embed)
+
 
 client.run(os.environ['token'])
