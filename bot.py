@@ -246,6 +246,10 @@ async def test(ctx, 상표명: str):
                         create_choice(
                             name="CSS",
                             value="CSS특"
+                        ),
+                        create_choice(
+                            name="CSS2",
+                            value="CSS특2"
                         )
                     ]
                 )
@@ -258,6 +262,10 @@ async def test(ctx, 내용: str):
     elif 내용 == "CSS특":
             embed=discord.Embed(description="CSS특", color=0x4ac8c7)
             embed.set_image(url="https://i.ibb.co/6Js7Mty/CSSxmr.gif")
+            await ctx.send(embed=embed)
+    elif 내용 == "CSS특2":
+            embed=discord.Embed(description="CSS특2", color=0x4ac8c7)
+            embed.set_image(url="https://i.ibb.co/gFr6mXx/CSS2.gif")
             await ctx.send(embed=embed)
 
 @slash.slash(name="앵무", 
