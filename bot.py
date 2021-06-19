@@ -13,7 +13,7 @@ async def on_ready():
 guild_ids = [595824909473808403]
 
 @slash.slash(name="우리핵", 
-            description="우리핵 디시콘 📁",
+            description="📁 우리핵 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -75,7 +75,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="로고", 
-            description="로고 📁",
+            description="📁 로고",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -229,8 +229,39 @@ async def test(ctx, 상표명: str):
         embed.set_image(url="https://i.ibb.co/VM3Fm3W/akdlszmfovmxm.png")
         await ctx.send(embed=embed)
 
+@slash.slash(name="특", 
+            description="📁 개발자특 바쁨",
+            guild_ids=guild_ids,
+            options=[
+                create_option(
+                    name="내용",
+                    description="무슨 내용인가요?",
+                    option_type=3,
+                    required=True,
+                    choices=[
+                        create_choice(
+                            name="디자이너",
+                            value="특디자이너"
+                        ),
+                        create_choice(
+                            name="CSS",
+                            value="특CSS"
+                        )
+                    ]
+                )
+            ])
+async def test(ctx, 내용: str):
+    if 내용 == "디자이너특":
+            embed=discord.Embed(description="디자이너특", color=0x4ac8c7)
+            embed.set_image(url="https://i.ibb.co/JcncbDj/elwkdlsjxmr.gif")
+            await ctx.send(embed=embed)
+    elif 내용 == "CSS특":
+            embed=discord.Embed(description="CSS특", color=0x4ac8c7)
+            embed.set_image(url="https://i.ibb.co/6Js7Mty/CSSxmr.gif")
+            await ctx.send(embed=embed)
+
 @slash.slash(name="앵무", 
-            description="앵무 디시콘 📁",
+            description="📁 앵무 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -277,7 +308,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="RGB", 
-            description="RGB 디시콘 📁",
+            description="📁 RGB 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -308,7 +339,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="사수", 
-            description="리사수 디시콘 📁",
+            description="📁 리사수 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -363,7 +394,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="냥", 
-            description="냐옹이 디시콘 📁",
+            description="📁 냐옹이 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -413,7 +444,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="둘리", 
-            description="둘리 디시콘 📁",
+            description="📁 둘리 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -540,7 +571,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="믿거", 
-            description="믿고거를 디시콘 📁",
+            description="📁 믿고거를 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -587,7 +618,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="에펙", 
-            description="에이펙스레전드 디시콘 📁",
+            description="📁 에이펙스레전드 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -674,7 +705,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="레식", 
-            description="레인보우식스시즈 디시콘 📁",
+            description="📁 레인보우식스시즈 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -873,7 +904,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="프붕", 
-            description="프로그래밍 디시콘 📁",
+            description="📁 프로그래밍 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -1008,7 +1039,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="제리", 
-            description="제리 디시콘 📁",
+            description="📁 제리 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -1095,7 +1126,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="컴붕", 
-            description="컴퓨터 디시콘 📁",
+            description="📁 컴퓨터 디시콘",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -1323,24 +1354,12 @@ async def 맞을래요(ctx):
     embed.set_image(url="https://i.ibb.co/WKwCCsZ/akwdmffo.png")
     await ctx.send(embed=embed)
 
-@slash.slash(name="디자이너특", description=" ", guild_ids=guild_ids)
-async def 디자이너특(ctx):
-    embed=discord.Embed(description="디자이너특", color=0x4ac8c7)
-    embed.set_image(url="https://i.ibb.co/JcncbDj/elwkdlsjxmr.gif")
-    await ctx.send(embed=embed)
-    
 @slash.slash(name="칠레감탄", description=" ", guild_ids=guild_ids)
 async def 칠레감탄(ctx):
     embed=discord.Embed(description="칠레감탄", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/hYYJxxv/clffprkaxks.gif")
     await ctx.send(embed=embed)
-    
-@slash.slash(name="CSS특", description=" ", guild_ids=guild_ids)
-async def CSS특(ctx):
-    embed=discord.Embed(description="CSS특", color=0x4ac8c7)
-    embed.set_image(url="https://i.ibb.co/6Js7Mty/CSSxmr.gif")
-    await ctx.send(embed=embed)
-    
+
 @slash.slash(name="대기", description=" ", guild_ids=guild_ids)
 async def 대기(ctx):
     embed=discord.Embed(description="대기", color=0x4ac8c7)
