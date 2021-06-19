@@ -13,7 +13,7 @@ async def on_ready():
 victim_id = 595824909473808403
 developer_id = 367303729566711808
 
-guild_ids = [victim_id, developer_id]
+guild_ids = [595824909473808403, 367303729566711808]
 
 
 @slash.slash(name="우리핵", 
