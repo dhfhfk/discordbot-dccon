@@ -85,40 +85,140 @@ async def test(ctx, 내용: str):
                     required=True,
                     choices=[
                         create_choice(
-                            name="깃허브",
-                            value="깃허브"
-                        ),
-                        create_choice(
-                            name="레식",
-                            value="레식"
-                        ),
-                        create_choice(
                             name="HTML",
                             value="HTML"
                         ),
                         create_choice(
                             name="CSS",
                             value="CSS"
-                        )
+                        ),
+                            create_choice(
+                            name="깃헙",
+                            value="깃헙"
+                        ),
+                        create_choice(
+                            name="븩스븨",
+                            value="븩스븨"
+                        ),
+                        create_choice(
+                            name="비주얼스튜디오",
+                            value="비주얼스튜디오"
+                        ),
+                        create_choice(
+                            name="아래아한글",
+                            value="아래아한글"
+                        ),
+                        create_choice(
+                            name="애플",
+                            value="애플"
+                        ),
+                        create_choice(
+                            name="에이펙스레전드",
+                            value="에이펙스레전드"
+                        ),
+                        create_choice(
+                            name="오버워치",
+                            value="오버워치"
+                        ),
+                        create_choice(
+                            name="온라인클래스",
+                            value="온라인클래스"
+                        ),
+                        create_choice(
+                            name="유비소프트",
+                            value="유비소프트"
+                        ),
+                        create_choice(
+                            name="카카오톡",
+                            value="카카오톡"
+                        ),
+                        create_choice(
+                            name="키네마스터",
+                            value="키네마스터"
+                        ),
+                        create_choice(
+                            name="IE",
+                            value="IE"
+                        ),
+                        create_choice(
+                            name="구글",
+                            value="구글"
+                        ),
+                        create_choice(
+                            name="클래스룸",
+                            value="클래스룸"
+                        ),
+                        create_choice(
+                            name="레인보우식스시즈",
+                            value="레인보우식스시즈"
+                        ),
                     ]
                 )
             ])
 async def test(ctx, 상표명: str):
-    if 상표명 == "깃허브":
-        embed=discord.Embed(description="깃허브로고", color=0xFFFFFF)
-        embed.set_image(url="https://i.ibb.co/M1Vnnpw/rltgjqm.png")
-        await ctx.send(embed=embed)
-    elif 상표명 == "레식":
-        embed=discord.Embed(description="레식로고", color=0xFFFFFF)
-        embed.set_image(url="https://i.ibb.co/2YYfDzB/tlrdms-Eka.gif")
-        await ctx.send(embed=embed)
-    elif 상표명 == "HTML":
+    if 상표명 == "HTML":
         embed=discord.Embed(description="HTML로고", color=0xFFFFFF)
         embed.set_image(url="https://i.ibb.co/h9wqbQN/html.png")
         await ctx.send(embed=embed)
     elif 상표명 == "CSS":
         embed=discord.Embed(description="CSS로고", color=0xFFFFFF)
         embed.set_image(url="https://i.ibb.co/1vnQBW2/css.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "깃헙":
+        embed=discord.Embed(description="깃헙", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/M1Vnnpw/rltgjqm.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "븩스븨":
+        embed=discord.Embed(description="븩스븨", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/9hG8Qfs/qmlrtmqml.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "비주얼스튜디오":
+        embed=discord.Embed(description="비주얼스튜디오", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/yRsStWm/qlwndjftmxbeldh.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "아래아한글":
+        embed=discord.Embed(description="아래아한글", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/WskCxmT/dkfodkgksrmf.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "애플":
+        embed=discord.Embed(description="애플", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/TqQKZkV/dovmf.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "에이펙스레전드":
+        embed=discord.Embed(description="에이펙스레전드", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/VjqNrck/dpdlvprtmfpwjsem.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "오버워치":
+        embed=discord.Embed(description="오버워치", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/JBJYpkq/dhqjdnjcl.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "온라인클래스":
+        embed=discord.Embed(description="온라인클래스", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/gdv5Smh/dhsfkdlszmffotm.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "유비소프트":
+        embed=discord.Embed(description="유비소프트", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/XDFLxrR/dbqlthvmxm.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "카카오톡":
+        embed=discord.Embed(description="카카오톡", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/FbQHg1p/zkzkdhxhr.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "키네마스터":
+        embed=discord.Embed(description="키네마스터", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/F70Kd9W/zlspaktmxj.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "IE":
+        embed=discord.Embed(description="IE", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/3sZfcrp/IE.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "구글":
+        embed=discord.Embed(description="구글", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/dj9cGG5/rnrmf.png")
+        await ctx.send(embed=embed)
+    elif 상표명 == "클래스룸":
+        embed=discord.Embed(description="클래스룸", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/phd8R21/zmffotmfna.png")
         await ctx.send(embed=embed)
 
 @slash.slash(name="앵무", 
@@ -465,20 +565,14 @@ async def test(ctx, 내용: str):
         embed=discord.Embed(description="믿거애", color=0xFFFFFF)
         embed.set_image(url="https://i.ibb.co/ByvWfmF/alerjdo.png")
         await ctx.send(embed=embed)
-        
-
     elif 내용 == "믿거앱":
         embed=discord.Embed(description="믿거앱", color=0xFFFFFF)
         embed.set_image(url="https://i.ibb.co/VV3Xzth/alerjdoq.png")
         await ctx.send(embed=embed)
-        
-
     elif 내용 == "믿거한":
         embed=discord.Embed(description="믿거한", color=0xFFFFFF)
         embed.set_image(url="https://i.ibb.co/Qbn3w3Q/alerjgks.png")
         await ctx.send(embed=embed)
-        
-
     elif 내용 == "믿거시":
         embed=discord.Embed(description="믿거시", color=0xFFFFFF)
         embed.set_image(url="https://i.ibb.co/yYspgQf/alerjtl.png")
@@ -992,6 +1086,61 @@ async def test(ctx, 내용: str):
         embed.set_image(url="https://i.ibb.co/JKxvDfN/wpflvhrth.gif")
         await ctx.send(embed=embed)
 
+@slash.slash(name="컴붕", 
+            description="컴퓨터 디시콘 목록",
+            guild_ids=guild_ids,
+            options=[
+                create_option(
+                    name="내용",
+                    description="무슨 내용인가요?",
+                    option_type=3,
+                    required=True,
+                    choices=[
+                        create_choice(
+                            name="앱등",
+                            value="컴붕앱등"
+                        ),
+                        create_choice(
+                            name="인텔",
+                            value="컴붕인텔"
+                        ),
+                        create_choice(
+                            name="RGB",
+                            value="컴붕RGB"
+                        ),
+                        create_choice(
+                            name="특가",
+                            value="컴붕특가"
+                        ),
+                        create_choice(
+                            name="발열",
+                            value="컴붕발열"
+                        ),
+                    ]
+                )
+            ])
+async def test(ctx, 내용: str):
+    if 내용 == "컴붕앱등":
+        embed=discord.Embed(description="컴붕앱등", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/jhkPpD2/zjaqnddoqemd.png")
+        await ctx.send(embed=embed)
+    elif 내용 == "컴붕인텔":
+        embed=discord.Embed(description="컴붕인텔", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/8dWKMwh/zjaqnddlsxpf.png")
+        await ctx.send(embed=embed)
+    elif 내용 == "컴붕RGB":
+        embed=discord.Embed(description="컴붕RGB", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/XSLnkk8/zjaqnd-RGB.png")
+        await ctx.send(embed=embed)
+    elif 내용 == "컴붕특가":
+        embed=discord.Embed(description="컴붕특가", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/JK9x5Q3/zjaqndxmrrk.png")
+        await ctx.send(embed=embed)
+    elif 내용 == "컴붕발열":
+        embed=discord.Embed(description="컴붕발열", color=0xFFFFFF)
+        embed.set_image(url="https://i.ibb.co/7KzCQ8N/zjaqndqkfduf.png")
+        await ctx.send(embed=embed)
+        
 @slash.slash(name="고티", description="디시콘을 보내줌", guild_ids=guild_ids)
 async def 고티(ctx):
     embed=discord.Embed(description="고티", color=0xFFFFFF)
@@ -1195,16 +1344,83 @@ async def 대기(ctx):
     embed=discord.Embed(description="대기", color=0xFFFFFF)
     embed.set_image(url="https://i.ibb.co/9rQgvzY/eorl.gif")
     await ctx.send(embed=embed)
-    
+
 @slash.slash(name="광클", description="디시콘을 보내줌", guild_ids=guild_ids)
 async def 광클(ctx):
     embed=discord.Embed(description="광클", color=0xFFFFFF)
     embed.set_image(url="https://i.ibb.co/d7yJyfb/rhkdzmf.gif")
     await ctx.send(embed=embed)
+
 @slash.slash(name="펀쿨끄덕", description="디시콘을 보내줌", guild_ids=guild_ids)
 async def 펀쿨끄덕(ctx):
     embed=discord.Embed(description="펀쿨끄덕", color=0xFFFFFF)
     embed.set_image(url="https://i.ibb.co/9WymfxM/vjsznf-Rmejr.gif")
     await ctx.send(embed=embed)
+@slash.slash(name="불편", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 불편(ctx):
+    embed=discord.Embed(description="불편", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/yNhtH1q/qnfvus.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="블루스크린", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 블루스크린(ctx):
+    embed=discord.Embed(description="블루스크린", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/rQgFMp9/qmffntmzmfls.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="애쉬", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 애쉬(ctx):
+    embed=discord.Embed(description="애쉬", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/ncrYnK4/dotnl.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="엘라샷건", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 엘라샷건(ctx):
+    embed=discord.Embed(description="엘라샷건", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/QmjbNMx/dpffktitrjs.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="인성문제", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 인성문제(ctx):
+    embed=discord.Embed(description="인성문제", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/BGmcp9n/dlstjdanswp.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="재부팅", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 재부팅(ctx):
+    embed=discord.Embed(description="재부팅", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/S5BqW5F/woqnxld.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="질병", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 질병(ctx):
+    embed=discord.Embed(description="질병", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/NKpvW95/wlfqud.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="1테라", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 테라(ctx):
+    embed=discord.Embed(description="1테라", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/HppH3St/1xpfk.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="갓겜", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 갓겜(ctx):
+    embed=discord.Embed(description="갓겜", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/17yw7qP/rktrpa.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="구글링", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 구글링(ctx):
+    embed=discord.Embed(description="구글링", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/3mv0Nc2/rnrmffld.png")
+    await ctx.send(embed=embed)
+
+@slash.slash(name="이과", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 이과(ctx):
+    embed=discord.Embed(description="이과", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/1T04P8F/Rhdnausdlrhk.png")
+    await ctx.send(embed=embed)
+    
 
 client.run(os.environ['token'])
