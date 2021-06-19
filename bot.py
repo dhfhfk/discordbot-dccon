@@ -220,7 +220,7 @@ async def test(ctx, 상표명: str):
         embed=discord.Embed(description="클래스룸", color=0x4ac8c7)
         embed.set_image(url="https://i.ibb.co/phd8R21/zmffotmfna.png")
         await ctx.send(embed=embed)
-    elif 내용 == "레인보우식스시즈":
+    elif 상표명 == "레인보우식스시즈":
         embed=discord.Embed(description="레인보우식스시즈", color=0x4ac8c7)
         embed.set_image(url="https://i.ibb.co/X8wFW3q/fpdlsqhdntlrtmtlwm.png")
         await ctx.send(embed=embed)
