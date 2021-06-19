@@ -13,7 +13,7 @@ async def on_ready():
 guild_ids = [595824909473808403]
 
 @slash.slash(name="우리핵", 
-            description="우리핵 디시콘 목록",
+            description="우리핵 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -75,7 +75,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="로고", 
-            description="로고 목록",
+            description="로고 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -230,7 +230,7 @@ async def test(ctx, 상표명: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="앵무", 
-            description="앵무 디시콘 목록",
+            description="앵무 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -277,7 +277,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="RGB", 
-            description="RGB 디시콘 목록",
+            description="RGB 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -308,7 +308,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="사수", 
-            description="리사수 디시콘 목록",
+            description="리사수 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -363,7 +363,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="냥", 
-            description="냐옹이 디시콘 목록",
+            description="냐옹이 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -413,7 +413,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="둘리", 
-            description="둘리 디시콘 목록",
+            description="둘리 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -540,7 +540,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="믿거", 
-            description="믿고거를 디시콘 목록",
+            description="믿고거를 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -587,7 +587,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="에펙", 
-            description="에이펙스레전드 디시콘 목록",
+            description="에이펙스레전드 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -674,7 +674,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="레식", 
-            description="레인보우식스시즈 디시콘 목록",
+            description="레인보우식스시즈 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -873,7 +873,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="프붕", 
-            description="프로그래밍 디시콘 목록",
+            description="프로그래밍 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -1008,7 +1008,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="제리", 
-            description="제리 디시콘 목록",
+            description="제리 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
@@ -1095,7 +1095,7 @@ async def test(ctx, 내용: str):
         await ctx.send(embed=embed)
 
 @slash.slash(name="컴붕", 
-            description="컴퓨터 디시콘 목록",
+            description="컴퓨터 디시콘 📁",
             guild_ids=guild_ids,
             options=[
                 create_option(
