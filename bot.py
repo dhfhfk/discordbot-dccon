@@ -1172,4 +1172,39 @@ async def 맞을래요(ctx):
     embed.set_image(url="https://i.ibb.co/WKwCCsZ/akwdmffo.png")
     await ctx.send(embed=embed)
 
+@slash.slash(name="디자이너특", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 디자이너특(ctx):
+    embed=discord.Embed(description="디자이너특", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/JcncbDj/elwkdlsjxmr.gif")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="칠레감탄", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 칠레감탄(ctx):
+    embed=discord.Embed(description="칠레감탄", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/hYYJxxv/clffprkaxks.gif")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="CSS특", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def CSS특(ctx):
+    embed=discord.Embed(description="CSS특", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/6Js7Mty/CSSxmr.gif")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="대기", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 대기(ctx):
+    embed=discord.Embed(description="대기", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/9rQgvzY/eorl.gif")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="광클", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 광클(ctx):
+    embed=discord.Embed(description="광클", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/d7yJyfb/rhkdzmf.gif")
+    await ctx.send(embed=embed)
+@slash.slash(name="펀쿨끄덕", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 펀쿨끄덕(ctx):
+    embed=discord.Embed(description="펀쿨끄덕", color=0xFFFFFF)
+    embed.set_image(url="https://i.ibb.co/9WymfxM/vjsznf-Rmejr.gif")
+    await ctx.send(embed=embed)
+
 client.run(os.environ['token'])
