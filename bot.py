@@ -1166,9 +1166,9 @@ async def 식은땀(ctx):
     embed.set_image(url="https://i.ibb.co/VNDTBn7/tlrdms-Eka.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="맞을래", description="디시콘을 보내줌", guild_ids=guild_ids)
-async def 맞을래(ctx):
-    embed=discord.Embed(description="맞을래", color=0xFFFFFF)
+@slash.slash(name="맞을래요", description="디시콘을 보내줌", guild_ids=guild_ids)
+async def 맞을래요(ctx):
+    embed=discord.Embed(description="맞을래요", color=0xFFFFFF)
     embed.set_image(url="https://i.ibb.co/WKwCCsZ/akwdmffo.png")
     await ctx.send(embed=embed)
 
