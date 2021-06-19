@@ -1,6 +1,6 @@
 import discord
 from discord_slash import SlashCommand # Importing the newly installed library.
-
+import os
 from discord_slash.utils.manage_commands import create_option
 
 client = discord.Client(intents=discord.Intents.all())
