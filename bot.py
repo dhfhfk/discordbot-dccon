@@ -251,11 +251,11 @@ async def test(ctx, 상표명: str):
                 )
             ])
 async def test(ctx, 내용: str):
-    if 내용 == "디자이너특":
+    if 내용 == "디자이너":
             embed=discord.Embed(description="디자이너특", color=0x4ac8c7)
             embed.set_image(url="https://i.ibb.co/JcncbDj/elwkdlsjxmr.gif")
             await ctx.send(embed=embed)
-    elif 내용 == "CSS특":
+    elif 내용 == "CSS":
             embed=discord.Embed(description="CSS특", color=0x4ac8c7)
             embed.set_image(url="https://i.ibb.co/6Js7Mty/CSSxmr.gif")
             await ctx.send(embed=embed)
