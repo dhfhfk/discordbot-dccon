@@ -1149,279 +1149,303 @@ async def test(ctx, 내용: str):
         embed.set_image(url="https://i.ibb.co/7KzCQ8N/zjaqndqkfduf.png")
         await ctx.send(embed=embed)
         
-@slash.slash(name="고티", description="", guild_ids=guild_ids)
+@slash.slash(name="고티", description=" ", guild_ids=guild_ids)
 async def 고티(ctx):
     embed=discord.Embed(description="고티", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/yVYpvGn/rhxl.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="님폰없", description="", guild_ids=guild_ids)
+@slash.slash(name="님폰없", description=" ", guild_ids=guild_ids)
 async def 님폰없(ctx):
     embed=discord.Embed(description="님폰없", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/BBZY0ZY/slavhsdjqt.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="능지", description="", guild_ids=guild_ids)
+@slash.slash(name="능지", description=" ", guild_ids=guild_ids)
 async def 능지(ctx):
     embed=discord.Embed(description="능지", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/zPhLbCK/smdwl.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="상담", description="", guild_ids=guild_ids)
+@slash.slash(name="상담", description=" ", guild_ids=guild_ids)
 async def 상담(ctx):
     embed=discord.Embed(description="상담", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/FhHh34G/tkdeka.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="사용자", description="", guild_ids=guild_ids)
+@slash.slash(name="사용자", description=" ", guild_ids=guild_ids)
 async def 사용자(ctx):
     embed=discord.Embed(description="사용자", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/C0Ny77Q/tkdydwk.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="팟지", description="", guild_ids=guild_ids)
+@slash.slash(name="팟지", description=" ", guild_ids=guild_ids)
 async def 팟지(ctx):
     embed=discord.Embed(description="팟지", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/3scVVPh/vktwl.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="라데온", description="", guild_ids=guild_ids)
+@slash.slash(name="라데온", description=" ", guild_ids=guild_ids)
 async def 라데온(ctx):
     embed=discord.Embed(description="라데온", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/TgQS38s/fkepdhs.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="양심", description="", guild_ids=guild_ids)
+@slash.slash(name="양심", description=" ", guild_ids=guild_ids)
 async def 양심(ctx):
     embed=discord.Embed(description="양심", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/cQTkgD0/didtla.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="이글쓰", description="", guild_ids=guild_ids)
+@slash.slash(name="이글쓰", description=" ", guild_ids=guild_ids)
 async def 이글쓰(ctx):
     embed=discord.Embed(description="이글쓰", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/mDnLbht/dlrmfTm.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="이파쓰", description="", guild_ids=guild_ids)
+@slash.slash(name="이파쓰", description=" ", guild_ids=guild_ids)
 async def 이파쓰(ctx):
     embed=discord.Embed(description="이파쓰", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/6J1PQKP/dlvkTm.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="라이젠", description="", guild_ids=guild_ids)
+@slash.slash(name="라이젠", description=" ", guild_ids=guild_ids)
 async def 라이젠(ctx):
     embed=discord.Embed(description="라이젠", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/mzF9KZm/fkdlwps.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="IT", description="", guild_ids=guild_ids)
+@slash.slash(name="IT", description=" ", guild_ids=guild_ids)
 async def IT(ctx):
     embed=discord.Embed(description="IT", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/wd98YM0/IT.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="대부분버그", description="", guild_ids=guild_ids)
+@slash.slash(name="대부분버그", description=" ", guild_ids=guild_ids)
 async def 대부분버그(ctx):
     embed=discord.Embed(description="대부분버그", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/Fq46YmD/eoqnqnsqjrm.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="계산중", description="", guild_ids=guild_ids)
+@slash.slash(name="계산중", description=" ", guild_ids=guild_ids)
 async def 계산중(ctx):
     embed=discord.Embed(description="계산중", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/NK7fTYK/rPtkswnd.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="짜잔", description="", guild_ids=guild_ids)
+@slash.slash(name="짜잔", description=" ", guild_ids=guild_ids)
 async def 짜잔(ctx):
     embed=discord.Embed(description="짜잔", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/3pkXM2D/Wkwks.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="그런겜", description="", guild_ids=guild_ids)
+@slash.slash(name="그런겜", description=" ", guild_ids=guild_ids)
 async def 그런겜(ctx):
     embed=discord.Embed(description="그런겜", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/JmXyHtD/rmfjsrpa.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="이륙", description="", guild_ids=guild_ids)
+@slash.slash(name="이륙", description=" ", guild_ids=guild_ids)
 async def 이륙(ctx):
     embed=discord.Embed(description="이륙", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/s9B1Ghq/dlfbr.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="존버또존버", description="", guild_ids=guild_ids)
+@slash.slash(name="존버또존버", description=" ", guild_ids=guild_ids)
 async def 존버또존버(ctx):
     embed=discord.Embed(description="존버또존버", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/mGG923D/whsqj-Ehwhsqj.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="의외로정상", description="", guild_ids=guild_ids)
+@slash.slash(name="의외로정상", description=" ", guild_ids=guild_ids)
 async def 의외로정상(ctx):
     embed=discord.Embed(description="의외로정상", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/x5j3dtG/dmldhlfhwjdtkd.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="정상", description="", guild_ids=guild_ids)
+@slash.slash(name="정상", description=" ", guild_ids=guild_ids)
 async def 정상(ctx):
     embed=discord.Embed(description="정상", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/DDzJtfC/wjdtkd.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="꼭사라", description="", guild_ids=guild_ids)
+@slash.slash(name="꼭사라", description=" ", guild_ids=guild_ids)
 async def 꼭사라(ctx):
     embed=discord.Embed(description="꼭사라", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/J5D6L5Q/Rhrtkfk.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="환불", description="", guild_ids=guild_ids)
+@slash.slash(name="환불", description=" ", guild_ids=guild_ids)
 async def 환불(ctx):
     embed=discord.Embed(description="환불", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/syF5YHy/ghksqnf.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="따봉", description="", guild_ids=guild_ids)
+@slash.slash(name="따봉", description=" ", guild_ids=guild_ids)
 async def 따봉(ctx):
     embed=discord.Embed(description="따봉", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/qsxZxfT/Ekqhd.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="편안", description="", guild_ids=guild_ids)
+@slash.slash(name="편안", description=" ", guild_ids=guild_ids)
 async def 편안(ctx):
     embed=discord.Embed(description="편안", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/v3Q021S/vusdks.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="어케했", description="", guild_ids=guild_ids)
+@slash.slash(name="어케했", description=" ", guild_ids=guild_ids)
 async def 어케했(ctx):
     embed=discord.Embed(description="어케했", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/j6xRBp3/djzpgoT.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="의도된", description="", guild_ids=guild_ids)
+@slash.slash(name="의도된", description=" ", guild_ids=guild_ids)
 async def 의도된(ctx):
     embed=discord.Embed(description="의도된", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/yRdYyFv/dmlehehls.gif")
     await ctx.send(embed=embed)
 
-@slash.slash(name="꼬우면", description="", guild_ids=guild_ids)
+@slash.slash(name="꼬우면", description=" ", guild_ids=guild_ids)
 async def 꼬우면(ctx):
     embed=discord.Embed(description="꼬우면", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/0qPmbfz/Rhdnaus.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="식은땀", description="", guild_ids=guild_ids)
+@slash.slash(name="식은땀", description=" ", guild_ids=guild_ids)
 async def 식은땀(ctx):
     embed=discord.Embed(description="식은땀", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/VNDTBn7/tlrdms-Eka.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="맞을래요", description="", guild_ids=guild_ids)
+@slash.slash(name="맞을래요", description=" ", guild_ids=guild_ids)
 async def 맞을래요(ctx):
     embed=discord.Embed(description="맞을래요", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/WKwCCsZ/akwdmffo.png")
     await ctx.send(embed=embed)
 
-@slash.slash(name="디자이너특", description="", guild_ids=guild_ids)
+@slash.slash(name="디자이너특", description=" ", guild_ids=guild_ids)
 async def 디자이너특(ctx):
     embed=discord.Embed(description="디자이너특", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/JcncbDj/elwkdlsjxmr.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="칠레감탄", description="", guild_ids=guild_ids)
+@slash.slash(name="칠레감탄", description=" ", guild_ids=guild_ids)
 async def 칠레감탄(ctx):
     embed=discord.Embed(description="칠레감탄", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/hYYJxxv/clffprkaxks.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="CSS특", description="", guild_ids=guild_ids)
+@slash.slash(name="CSS특", description=" ", guild_ids=guild_ids)
 async def CSS특(ctx):
     embed=discord.Embed(description="CSS특", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/6Js7Mty/CSSxmr.gif")
     await ctx.send(embed=embed)
     
-@slash.slash(name="대기", description="", guild_ids=guild_ids)
+@slash.slash(name="대기", description=" ", guild_ids=guild_ids)
 async def 대기(ctx):
     embed=discord.Embed(description="대기", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/9rQgvzY/eorl.gif")
     await ctx.send(embed=embed)
 
-@slash.slash(name="광클", description="", guild_ids=guild_ids)
+@slash.slash(name="광클", description=" ", guild_ids=guild_ids)
 async def 광클(ctx):
     embed=discord.Embed(description="광클", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/d7yJyfb/rhkdzmf.gif")
     await ctx.send(embed=embed)
 
-@slash.slash(name="펀쿨끄덕", description="", guild_ids=guild_ids)
+@slash.slash(name="펀쿨끄덕", description=" ", guild_ids=guild_ids)
 async def 펀쿨끄덕(ctx):
     embed=discord.Embed(description="펀쿨끄덕", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/9WymfxM/vjsznf-Rmejr.gif")
     await ctx.send(embed=embed)
-@slash.slash(name="불편", description="", guild_ids=guild_ids)
+@slash.slash(name="불편", description=" ", guild_ids=guild_ids)
 async def 불편(ctx):
     embed=discord.Embed(description="불편", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/yNhtH1q/qnfvus.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="블루스크린", description="", guild_ids=guild_ids)
+@slash.slash(name="블루스크린", description=" ", guild_ids=guild_ids)
 async def 블루스크린(ctx):
     embed=discord.Embed(description="블루스크린", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/rQgFMp9/qmffntmzmfls.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="애쉬", description="", guild_ids=guild_ids)
+@slash.slash(name="애쉬", description=" ", guild_ids=guild_ids)
 async def 애쉬(ctx):
     embed=discord.Embed(description="애쉬", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/ncrYnK4/dotnl.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="엘라샷건", description="", guild_ids=guild_ids)
+@slash.slash(name="엘라샷건", description=" ", guild_ids=guild_ids)
 async def 엘라샷건(ctx):
     embed=discord.Embed(description="엘라샷건", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/QmjbNMx/dpffktitrjs.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="인성문제", description="", guild_ids=guild_ids)
+@slash.slash(name="인성문제", description=" ", guild_ids=guild_ids)
 async def 인성문제(ctx):
     embed=discord.Embed(description="인성문제", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/BGmcp9n/dlstjdanswp.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="재부팅", description="", guild_ids=guild_ids)
+@slash.slash(name="재부팅", description=" ", guild_ids=guild_ids)
 async def 재부팅(ctx):
     embed=discord.Embed(description="재부팅", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/S5BqW5F/woqnxld.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="질병", description="", guild_ids=guild_ids)
+@slash.slash(name="질병", description=" ", guild_ids=guild_ids)
 async def 질병(ctx):
     embed=discord.Embed(description="질병", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/NKpvW95/wlfqud.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="1테라", description="", guild_ids=guild_ids)
+@slash.slash(name="1테라", description=" ", guild_ids=guild_ids)
 async def 테라(ctx):
     embed=discord.Embed(description="1테라", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/HppH3St/1xpfk.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="갓겜", description="", guild_ids=guild_ids)
+@slash.slash(name="갓겜", description=" ", guild_ids=guild_ids)
 async def 갓겜(ctx):
     embed=discord.Embed(description="갓겜", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/17yw7qP/rktrpa.png")
     await ctx.send(embed=embed)
     
-@slash.slash(name="구글링", description="", guild_ids=guild_ids)
+@slash.slash(name="구글링", description=" ", guild_ids=guild_ids)
 async def 구글링(ctx):
     embed=discord.Embed(description="구글링", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/3mv0Nc2/rnrmffld.png")
     await ctx.send(embed=embed)
 
-@slash.slash(name="이과", description="", guild_ids=guild_ids)
+@slash.slash(name="이과", description=" ", guild_ids=guild_ids)
 async def 이과(ctx):
     embed=discord.Embed(description="이과", color=0x4ac8c7)
     embed.set_image(url="https://i.ibb.co/1T04P8F/Rhdnausdlrhk.png")
+    await ctx.send(embed=embed)
+
+@slash.slash(name="행복회로", description=" ", guild_ids=guild_ids)
+async def 행복회로(ctx):
+    embed=discord.Embed(description="행복회로", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/645zgvT/godqhrghlfh.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="과금전략", description=" ", guild_ids=guild_ids)
+async def 과금전략(ctx):
+    embed=discord.Embed(description="과금전략", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/WcVQfTq/rhkrmawjsfir.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="시간낭비", description=" ", guild_ids=guild_ids)
+async def 시간낭비(ctx):
+    embed=discord.Embed(description="시간낭비", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/sjJk02y/tlrksskdql.png")
+    await ctx.send(embed=embed)
+    
+@slash.slash(name="말잇못", description=" ", guild_ids=guild_ids)
+async def 말잇못(ctx):
+    embed=discord.Embed(description="말잇못", color=0x4ac8c7)
+    embed.set_image(url="https://i.ibb.co/3dK37QD/akfdltaht.png")
     await ctx.send(embed=embed)
     
 
