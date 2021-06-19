@@ -10,10 +10,7 @@ slash = SlashCommand(client, sync_commands=True)
 async def on_ready():
     print("준비된!")
 
-victim_id = 595824909473808403
-developer_id = 367303729566711808
-
-guild_ids = [595824909473808403, 367303729566711808]
+guild_ids = [595824909473808403]
 
 
 @slash.slash(name="우리핵", 
