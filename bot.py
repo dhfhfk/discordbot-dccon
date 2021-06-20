@@ -17,7 +17,6 @@ guild_ids = [victim_id]
 
 @slash.slash(name="콘", 
             description="원하는 이미지를 콘으로 만들어보세요!",
-            guild_ids=guild_ids,
             options=[
                 create_option(
                     name="작업",
