@@ -1,6 +1,7 @@
 from discord_slash.utils.manage_commands import create_option, create_choice
 import discord
 from discord_slash import SlashCommand
+from discord import DMChannel
 import os
 
 client = discord.Client(intents=discord.Intents.all())
@@ -15,6 +16,49 @@ victim_id = 595824909473808403
 
 guild_ids = [testserver_id, victim_id]
 
+@slash.slash(name="콘", 
+            description="원하는 이미지를 콘으로 만들어보세요!",
+            options=[
+                create_option(
+                    name="작업",
+                    description="무슨 작업을 진행할까요?",
+                    option_type=3,
+                    required=True,
+                    choices=[
+                        create_choice(
+                            name="생성",
+                            value="Create"
+                        ),
+                        create_choice(
+                            name="수정",
+                            value="Edit"
+                        ),
+                        create_choice(
+                            name="삭제",
+                            value="Delete"
+                        ),
+                        create_choice(
+                            name="목록",
+                            value="List"
+                        )
+                    ]
+                )
+            ])
+async def con(ctx, 작업: str, pass_context=True):
+    if not ctx.guild:
+        if 작업 == "Create":
+            await ctx.send(content="기능 구현중입니다.")
+        elif 작업 == "Edit":
+            await ctx.send(content="기능 구현중입니다.")
+        elif 작업 == "Delete":
+            await ctx.send(content="기능 구현중입니다.")
+        elif 작업 == "List":
+            await ctx.send(content="기능 구현중입니다.")
+    else:
+        message = ctx.message
+        await ctx.send(hidden = True, content="[❗] 콘 생성은 DM/PM 을 이용해주세요!")
+        user = await client.fetch_user(ctx.author.id)
+        await DMChannel.send(user, "[❗] 콘 생성은 이 채널을 이용해주세요!")
 
 @slash.slash(name="우리핵", 
             description="📁 우리핵 디시콘",
