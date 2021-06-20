@@ -18,11 +18,11 @@ guild_ids = [testserver_id, victim_id]
 
 @slash.slash(name="콘", 
             description="원하는 이미지를 콘으로 만들어보세요!",
+            guild_ids=guild_ids,
             options=[
                 create_option(
                     name="작업",
                     description="무슨 작업을 진행할까요?",
-                    guild_ids=guild_ids,
                     option_type=3,
                     required=True,
                     choices=[
