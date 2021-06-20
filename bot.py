@@ -15,6 +15,9 @@ victim_id = 595824909473808403
 
 guild_ids = [victim_id]
 
+confirm_emoji = '\N{Heavy Large Circle}'
+deny_emoji = '\N{Cross Mark}'
+
 @slash.slash(name="콘", 
             description="원하는 이미지를 콘으로 만들어보세요!",
             options=[
@@ -46,18 +49,122 @@ guild_ids = [victim_id]
 async def con(ctx, 작업: str, pass_context=True):
     if not ctx.guild:
         if 작업 == "Create":
-            await ctx.send(content="기능 구현중입니다.")
+            embed=discord.Embed(title="콘 생성 [ 1/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+            embed.add_field(name="1. 생성할 콘 이름을 보내주세요.", value="↳ 채팅으로 보내기", inline=True)
+            embed.set_footer(text="취소시 ❌")
+            msg = await ctx.send(embed=embed) # 콘 이름 보내라는 임베드 메세지 전송
+            await msg.add_reaction(deny_emoji) # 취소시 ❌ 이모티콘 리액션 달기
+            @client.event
+            async def on_reaction_add(reaction, user):
+                if user.bot == 1:
+                    return None
+                if str(reaction.emoji) == deny_emoji: # 취소시 ❌ 이모티콘이 추가되면 
+                    await msg.delete()
+                    await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                    return
+
+            conname = await client.wait_for("message")
+            await msg.delete()
+            embed=discord.Embed(title="콘 생성 [ 2/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+            embed.add_field(name=f"{conname.content}", value=" 으로 등록할까요?", inline=True)
+            embed.set_footer(text="결정시 ⭕, 취소시 ❌")
+            name_confirm = await ctx.send(embed=embed)
+            await name_confirm.add_reaction(confirm_emoji)
+            await name_confirm.add_reaction(deny_emoji)
+
+            @client.event
+            async def on_reaction_add(reaction, user):
+                if user.bot == 1:
+                    return None
+                if str(reaction.emoji) == confirm_emoji:
+                    await name_confirm.delete()
+                    embed=discord.Embed(title="콘 생성 [ 3/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                    embed.add_field(name=f"1. 생성될 콘 이름: ", value=f"{conname.content}", inline=False)
+                    embed.add_field(name="2. 생성할 콘 이미지를 보내주세요.", value="↳ 채팅으로 이미지 보내기", inline=False)
+                    embed.set_footer(text="취소시 ❌, 100x100을 추천합니다.")
+                    msg = await ctx.send(embed=embed)
+                    await msg.add_reaction(deny_emoji)
+                    @client.event
+                    async def on_reaction_add(reaction, user):
+                        if user.bot == 1:
+                            return None
+                        if str(reaction.emoji) == deny_emoji:
+                            await msg.delete()
+                            await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                            return None
+                if str(reaction.emoji) == deny_emoji:
+                    await name_confirm.delete()
+                    await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                    return None
+
+                conurl = await client.wait_for("message")
+                await msg.delete()
+                image = conurl.attachments[0]
+                ctx.send(image)
+                embed=discord.Embed(title="콘 생성 [ 4/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                embed.add_field(name=f"이 이미지로 등록할까요?", value="100x100을 추천합니다.", inline=True)
+                embed.set_footer(text="결정시 ⭕, 취소시 ❌")
+                embed.set_image(url=image)
+                msg = await ctx.send(embed=embed)
+                await msg.add_reaction(confirm_emoji)
+                await msg.add_reaction(deny_emoji)
+
+                @client.event
+                async def on_reaction_add(reaction, user):
+                    if user.bot == 1:
+                        return None
+                    if str(reaction.emoji) == confirm_emoji:
+                        await msg.delete()
+                        embed=discord.Embed(title="콘 생성 [ 5/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                        embed.add_field(name=f"상위 태그 분류에 등록할까요?", value="예) 냥슬픔, 냥경악 ", inline=True)
+                        embed.set_footer(text="등록시 ⭕, 미등록시 ❌")
+                        tagmsg = await ctx.send(embed=embed)
+                        await tagmsg.add_reaction(confirm_emoji)
+                        await tagmsg.add_reaction(deny_emoji)
+                        @client.event
+                        async def on_reaction_add(reaction, user):
+                            if user.bot == 1:
+                                return None
+                            if str(reaction.emoji) == confirm_emoji:
+                                await tagmsg.delete()
+                                await ctx.send(hidden = True, content="기능 구현중입니다.")
+                                return None
+                            if str(reaction.emoji) == deny_emoji:
+                                await tagmsg.delete()
+                                await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                                return None
+
+                    if str(reaction.emoji) == deny_emoji:
+                        await msg.delete()
+                        await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                        return None
+                    
+                    
+
+
         elif 작업 == "Edit":
             await ctx.send(content="기능 구현중입니다.")
         elif 작업 == "Delete":
             await ctx.send(content="기능 구현중입니다.")
         elif 작업 == "List":
             await ctx.send(content="기능 구현중입니다.")
-    else:
-        message = ctx.message
-        await ctx.send(hidden = True, content="[❗] 콘 생성은 DM/PM 을 이용해주세요!")
+    elif 작업 == "Create":
+        await ctx.send(hidden = True, content="[❗] 커스텀 콘 생성은 DM/PM 을 이용해주세요!")
         user = await client.fetch_user(ctx.author.id)
-        await DMChannel.send(user, "[❗] 콘 생성은 이 채널을 이용해주세요!")
+        await DMChannel.send(user, "[❗] 커스텀 콘 생성은 이 채널을 이용해주세요!")
+    elif 작업 == "Edit":
+        await ctx.send(hidden = True, content="[❗] 커스텀 콘 수정은 DM/PM 을 이용해주세요!")
+        user = await client.fetch_user(ctx.author.id)
+        await DMChannel.send(user, "[❗] 커스텀 콘 수정은 이 채널을 이용해주세요!")
+    elif 작업 == "Delete":
+        await ctx.send(hidden = True, content="[❗] 커스텀 콘 삭제는 DM/PM 을 이용해주세요!")
+        user = await client.fetch_user(ctx.author.id)
+        await DMChannel.send(user, "[❗] 커스텀 콘 삭제는 이 채널을 이용해주세요!")
+    elif 작업 == "List":
+        await ctx.send(hidden = True, content="[❗] 커스텀 콘 목록은 DM/PM 을 이용해주세요!")
+        user = await client.fetch_user(ctx.author.id)
+        await DMChannel.send(user, "[❗] 커스텀 콘 목록은 이 채널을 이용해주세요!")
+
 
 @slash.slash(name="우리핵", 
             description="📁 우리핵 디시콘",
