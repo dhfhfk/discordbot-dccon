@@ -11,12 +11,10 @@ slash = SlashCommand(client, sync_commands=True)
 async def on_ready():
     print("준비된!")
 
-testserver_id = 367303729566711808
 victim_id = 595824909473808403
 
-guild_ids = [testserver_id, victim_id]
+guild_ids = [victim_id]
 
-"""
 @slash.slash(name="콘", 
             description="원하는 이미지를 콘으로 만들어보세요!",
             guild_ids=guild_ids,
@@ -61,7 +59,6 @@ async def con(ctx, 작업: str, pass_context=True):
         await ctx.send(hidden = True, content="[❗] 콘 생성은 DM/PM 을 이용해주세요!")
         user = await client.fetch_user(ctx.author.id)
         await DMChannel.send(user, "[❗] 콘 생성은 이 채널을 이용해주세요!")
-"""
 
 @slash.slash(name="우리핵", 
             description="📁 우리핵 디시콘",
