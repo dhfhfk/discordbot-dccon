@@ -59,7 +59,7 @@ async def con(ctx, 작업: str, pass_context=True):
             @client.event
             async def on_reaction_add(reaction, user):
                 if user.bot == 1:
-                    return None
+                    return
 
                 if str(reaction.emoji) == deny_emoji: # 등록 취소
                     await tagmsg.delete()
@@ -76,7 +76,7 @@ async def con(ctx, 작업: str, pass_context=True):
                     @client.event
                     async def on_reaction_add(reaction, user):
                         if user.bot == 1:
-                            return None
+                            return
                         if str(reaction.emoji) == deny_emoji:
                             await msg.delete()
                             await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
@@ -91,7 +91,7 @@ async def con(ctx, 작업: str, pass_context=True):
                     @client.event
                     async def on_reaction_add(reaction, user):
                         if user.bot == 1:
-                            return None
+                            return
                         if str(reaction.emoji) == deny_emoji: # 취소시 ❌ 이모티콘이 추가되면 
                             await msg.delete()
                             await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
@@ -107,11 +107,11 @@ async def con(ctx, 작업: str, pass_context=True):
                     @client.event
                     async def on_reaction_add(reaction, user):
                         if user.bot == 1:
-                            return None
+                            return
                         if str(reaction.emoji) == deny_emoji:
                             await name_confirm.delete()
                             await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
-                            return None
+                            return
                         if str(reaction.emoji) == confirm_emoji:
                             await name_confirm.delete()
                             embed=discord.Embed(title="콘 생성 [ 4/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
@@ -123,11 +123,11 @@ async def con(ctx, 작업: str, pass_context=True):
                             @client.event
                             async def on_reaction_add(reaction, user):
                                 if user.bot == 1:
-                                    return None
+                                    return
                                 if str(reaction.emoji) == deny_emoji:
                                     await msg.delete()
                                     await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
-                                    return None
+                                    return
                             conurl = await client.wait_for("message")
                             await msg.delete()
                             image = conurl.attachments[0]
@@ -142,7 +142,7 @@ async def con(ctx, 작업: str, pass_context=True):
                             @client.event
                             async def on_reaction_add(reaction, user):
                                 if user.bot == 1:
-                                    return None
+                                    return
                                 if str(reaction.emoji) == deny_emoji:
                                     await msg.delete()
                                     await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
@@ -158,7 +158,7 @@ async def con(ctx, 작업: str, pass_context=True):
                                     @client.event
                                     async def on_reaction_add(reaction, user):
                                         if user.bot == 1:
-                                            return None
+                                            return
                                         if str(reaction.emoji) == deny_emoji:
                                             await preview.delete()
                                             await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
@@ -181,7 +181,7 @@ async def con(ctx, 작업: str, pass_context=True):
                     @client.event
                     async def on_reaction_add(reaction, user):
                         if user.bot == 1:
-                            return None
+                            return
                         if str(reaction.emoji) == deny_emoji:
                             await msg.delete()
                             await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
@@ -198,11 +198,11 @@ async def con(ctx, 작업: str, pass_context=True):
                     @client.event
                     async def on_reaction_add(reaction, user):
                         if user.bot == 1:
-                            return None
+                            return
                         if str(reaction.emoji) == deny_emoji:
                             await name_confirm.delete()
                             await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
-                            return None
+                            return
                         if str(reaction.emoji) == confirm_emoji:
                             await name_confirm.delete()
                             embed=discord.Embed(title="콘 생성 [ 4/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
@@ -214,11 +214,11 @@ async def con(ctx, 작업: str, pass_context=True):
                             @client.event
                             async def on_reaction_add(reaction, user):
                                 if user.bot == 1:
-                                    return None
+                                    return
                                 if str(reaction.emoji) == deny_emoji:
                                     await msg.delete()
                                     await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
-                                    return None
+                                    return
                             conurl = await client.wait_for("message")
                             await msg.delete()
                             image = conurl.attachments[0]
@@ -233,7 +233,7 @@ async def con(ctx, 작업: str, pass_context=True):
                             @client.event
                             async def on_reaction_add(reaction, user):
                                 if user.bot == 1:
-                                    return None
+                                    return
                                 if str(reaction.emoji) == deny_emoji:
                                     await msg.delete()
                                     await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
@@ -249,7 +249,7 @@ async def con(ctx, 작업: str, pass_context=True):
                                     @client.event
                                     async def on_reaction_add(reaction, user):
                                         if user.bot == 1:
-                                            return None
+                                            return
                                         if str(reaction.emoji) == deny_emoji:
                                             await preview.delete()
                                             await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
