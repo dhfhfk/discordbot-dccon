@@ -50,12 +50,6 @@ skip_emoji = '\N{Black Right-Pointing Double Triangle with Vertical Bar}'
 async def con(ctx, 작업: str, pass_context=True):
     if not ctx.guild:
         if 작업 == "Create":
-            embed=discord.Embed(title="최종 기능 추가 안내")
-            embed.add_field(name="1. 명령어를 어떻게 추가하느냐", value="Discord Cogs Extension을 사용하면 명령어들을 확장프로그램처럼 껐다 켰다 할 수 있는데, 이게 Slash 명령어에도 적용이 되고, 자동완성 등록이 되는지가 문제. 테스트해 봤는데 어떻게 하는지 도저히 모르겠음", inline=False)
-            embed.add_field(name="2. 봇 호스팅 관련 문제", value="디스코드 봇을 로컬에서 직접 돌리는 게 아니라 무료 호스팅 사이트를 이용하다 보니, 수정한 소스코드를 깃허브에 커밋하면, Heroku에서 빌드하고 시작하는 방식임. 가끔 Heroku에서 빌드제한을 걸어서 빌드가 제대로 작동되지 않는 경우가 있음. ", inline=False)
-            embed.add_field(name="3. 이미지 호스팅 문제", value="Imgbb에서 제공하는 API가 유료라서 사용하기 좀 그럼, 디스코드 자체 이미지 링크를 따오고 있지만 불안정함", inline=False)
-            embed.add_field(name="그래서 결론은?", value="콘 추가는 그냥 기존의 방식을 따르는 것으로로 일단 결정함, 일단 반자동화에 신경 쓰면 될 듯", inline=False)
-            await ctx.send(hidden = True, embed=embed)
             embed=discord.Embed(title="콘 생성 [ 1/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
             embed.add_field(name=f"상위 태그 분류에 등록할까요?", value="예) /냥: 냥슬픔, 냥경악 ", inline=True)
             embed.set_footer(text="등록시 ⭕, 미등록시 ⏭️, 취소시 ❌")
@@ -106,7 +100,7 @@ async def con(ctx, 작업: str, pass_context=True):
                     conname = await client.wait_for("message")
                     await msg.delete()
                     embed=discord.Embed(title="콘 생성 [ 3/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
-                    embed.add_field(name=f"{contag.content}{conname.content}", value=" 로 등록할까요?", inline=True)
+                    embed.add_field(name=f"{contag.content}{conname.content}", value=" 으로 등록할까요?", inline=True)
                     embed.set_footer(text="결정시 ⭕, 취소시 ❌")
                     name_confirm = await ctx.send(embed=embed)
                     await name_confirm.add_reaction(confirm_emoji)
@@ -172,12 +166,7 @@ async def con(ctx, 작업: str, pass_context=True):
                                             return
                                         if str(reaction.emoji) == confirm_emoji:
                                             await preview.delete()
-                                            embed=discord.Embed(title="최종 기능 추가 안내")
-                                            embed.add_field(name="1. 명령어를 어떻게 추가하느냐", value="Discord Cogs Extension을 사용하면 명령어들을 확장프로그램처럼 껐다 켰다 할 수 있는데, 이게 Slash 명령어에도 적용이 되고, 자동완성 등록이 되는지가 문제. 테스트해 봤는데 어떻게 하는지 도저히 모르겠음", inline=False)
-                                            embed.add_field(name="2. 봇 호스팅 관련 문제", value="디스코드 봇을 로컬에서 직접 돌리는 게 아니라 무료 호스팅 사이트를 이용하다 보니, 수정한 소스코드를 깃허브에 커밋하면, Heroku에서 빌드하고 시작하는 방식임. 가끔 Heroku에서 빌드제한을 걸어서 빌드가 제대로 작동되지 않는 경우가 있음. ", inline=False)
-                                            embed.add_field(name="3. 이미지 호스팅 문제", value="Imgbb에서 제공하는 API가 유료라서 사용하기 좀 그럼, 디스코드 자체 이미지 링크를 따오고 있지만 불안정함", inline=False)
-                                            embed.add_field(name="그래서 결론은?", value="콘 추가는 그냥 기존의 방식을 따르는 것으로로 일단 결정함, 일단 반자동화에 신경 쓰면 될 듯", inline=False)
-                                            await ctx.send(hidden = True, embed=embed)
+                                            await ctx.send(hidden = True, content="최종 등록 기능을 구현중입니다.")
                                             return
 
 
@@ -201,7 +190,7 @@ async def con(ctx, 작업: str, pass_context=True):
                     conname = await client.wait_for("message")
                     await msg.delete()
                     embed=discord.Embed(title="콘 생성 [ 3/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
-                    embed.add_field(name=f"{conname.content}", value=" 로 등록할까요?", inline=True)
+                    embed.add_field(name=f"{conname.content}", value=" 으로 등록할까요?", inline=True)
                     embed.set_footer(text="결정시 ⭕, 취소시 ❌")
                     name_confirm = await ctx.send(embed=embed)
                     await name_confirm.add_reaction(confirm_emoji)
@@ -268,12 +257,7 @@ async def con(ctx, 작업: str, pass_context=True):
                                             return
                                         if str(reaction.emoji) == confirm_emoji:
                                             await preview.delete()
-                                            embed=discord.Embed(title="최종 기능 추가 안내")
-                                            embed.add_field(name="1. 명령어를 어떻게 추가하느냐", value="Discord Cogs Extension을 사용하면 명령어들을 확장프로그램처럼 껐다 켰다 할 수 있는데, 이게 Slash 명령어에도 적용이 되고, 자동완성 등록이 되는지가 문제. 테스트해 봤는데 어떻게 하는지 도저히 모르겠음", inline=False)
-                                            embed.add_field(name="2. 봇 호스팅 관련 문제", value="디스코드 봇을 로컬에서 직접 돌리는 게 아니라 무료 호스팅 사이트를 이용하다 보니, 수정한 소스코드를 깃허브에 커밋하면, Heroku에서 빌드하고 시작하는 방식임. 가끔 Heroku에서 빌드제한을 걸어서 빌드가 제대로 작동되지 않는 경우가 있음. ", inline=False)
-                                            embed.add_field(name="3. 이미지 호스팅 문제", value="Imgbb에서 제공하는 API가 유료라서 사용하기 좀 그럼, 디스코드 자체 이미지 링크를 따오고 있지만 불안정함", inline=False)
-                                            embed.add_field(name="그래서 결론은?", value="콘 추가는 그냥 기존의 방식을 따르는 것으로로 일단 결정함, 일단 반자동화에 신경 쓰면 될 듯", inline=False)
-                                            await ctx.send(hidden = True, embed=embed)
+                                            await ctx.send(hidden = True, content="최종 등록 기능을 구현중입니다.")
                                             return
 
 
