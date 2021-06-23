@@ -17,6 +17,7 @@ guild_ids = [victim_id]
 
 confirm_emoji = '\N{Heavy Large Circle}'
 deny_emoji = '\N{Cross Mark}'
+skip_emoji = '\N{Black Right-Pointing Double Triangle with Vertical Bar}'
 
 @slash.slash(name="콘", 
             description="원하는 이미지를 콘으로 만들어보세요!",
@@ -49,39 +50,28 @@ deny_emoji = '\N{Cross Mark}'
 async def con(ctx, 작업: str, pass_context=True):
     if not ctx.guild:
         if 작업 == "Create":
-            embed=discord.Embed(title="콘 생성 [ 1/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
-            embed.add_field(name="1. 생성할 콘 이름을 보내주세요.", value="↳ 채팅으로 보내기", inline=True)
-            embed.set_footer(text="취소시 ❌")
-            msg = await ctx.send(embed=embed) # 콘 이름 보내라는 임베드 메세지 전송
-            await msg.add_reaction(deny_emoji) # 취소시 ❌ 이모티콘 리액션 달기
+            embed=discord.Embed(title="콘 생성 [ 1/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+            embed.add_field(name=f"상위 태그 분류에 등록할까요?", value="예) /냥: 냥슬픔, 냥경악 ", inline=True)
+            embed.set_footer(text="등록시 ⭕, 미등록시 ⏭️, 취소시 ❌")
+            tagmsg = await ctx.send(embed=embed)
+            await tagmsg.add_reaction(confirm_emoji)
+            await tagmsg.add_reaction(skip_emoji)
+            await tagmsg.add_reaction(deny_emoji)
             @client.event
             async def on_reaction_add(reaction, user):
                 if user.bot == 1:
                     return None
-                if str(reaction.emoji) == deny_emoji: # 취소시 ❌ 이모티콘이 추가되면 
-                    await msg.delete()
+
+                if str(reaction.emoji) == deny_emoji: # 등록 취소
+                    await tagmsg.delete()
                     await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
                     return
 
-            conname = await client.wait_for("message")
-            await msg.delete()
-            embed=discord.Embed(title="콘 생성 [ 2/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
-            embed.add_field(name=f"{conname.content}", value=" 으로 등록할까요?", inline=True)
-            embed.set_footer(text="결정시 ⭕, 취소시 ❌")
-            name_confirm = await ctx.send(embed=embed)
-            await name_confirm.add_reaction(confirm_emoji)
-            await name_confirm.add_reaction(deny_emoji)
-
-            @client.event
-            async def on_reaction_add(reaction, user):
-                if user.bot == 1:
-                    return None
-                if str(reaction.emoji) == confirm_emoji:
-                    await name_confirm.delete()
-                    embed=discord.Embed(title="콘 생성 [ 3/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
-                    embed.add_field(name=f"1. 생성될 콘 이름: ", value=f"{conname.content}", inline=False)
-                    embed.add_field(name="2. 생성할 콘 이미지를 보내주세요.", value="↳ 채팅으로 이미지 보내기", inline=False)
-                    embed.set_footer(text="취소시 ❌, 100x100을 추천합니다.")
+                if str(reaction.emoji) == confirm_emoji: #태그 등록
+                    await tagmsg.delete()
+                    embed=discord.Embed(title="콘 생성 [ 1/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                    embed.add_field(name="1. 분류 태그를 보내주세요.", value="↳ 채팅으로 보내기", inline=True)
+                    embed.set_footer(text="취소시 ❌")
                     msg = await ctx.send(embed=embed)
                     await msg.add_reaction(deny_emoji)
                     @client.event
@@ -91,55 +81,187 @@ async def con(ctx, 작업: str, pass_context=True):
                         if str(reaction.emoji) == deny_emoji:
                             await msg.delete()
                             await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                            return
+                    contag = await client.wait_for("message")
+                    await msg.delete()
+                    embed=discord.Embed(title="콘 생성 [ 2/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                    embed.add_field(name="1. 생성할 콘 이름을 보내주세요.", value="↳ 채팅으로 보내기", inline=True)
+                    embed.set_footer(text="취소시 ❌")
+                    msg = await ctx.send(embed=embed) # 콘 이름 보내라는 임베드 메세지 전송
+                    await msg.add_reaction(deny_emoji) # 취소시 ❌ 이모티콘 리액션 달기
+                    @client.event
+                    async def on_reaction_add(reaction, user):
+                        if user.bot == 1:
                             return None
-                if str(reaction.emoji) == deny_emoji:
-                    await name_confirm.delete()
-                    await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
-                    return None
+                        if str(reaction.emoji) == deny_emoji: # 취소시 ❌ 이모티콘이 추가되면 
+                            await msg.delete()
+                            await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                            return
+                    conname = await client.wait_for("message")
+                    await msg.delete()
+                    embed=discord.Embed(title="콘 생성 [ 3/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                    embed.add_field(name=f"{contag.content}{conname.content}", value=" 으로 등록할까요?", inline=True)
+                    embed.set_footer(text="결정시 ⭕, 취소시 ❌")
+                    name_confirm = await ctx.send(embed=embed)
+                    await name_confirm.add_reaction(confirm_emoji)
+                    await name_confirm.add_reaction(deny_emoji)
+                    @client.event
+                    async def on_reaction_add(reaction, user):
+                        if user.bot == 1:
+                            return None
+                        if str(reaction.emoji) == deny_emoji:
+                            await name_confirm.delete()
+                            await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                            return None
+                        if str(reaction.emoji) == confirm_emoji:
+                            await name_confirm.delete()
+                            embed=discord.Embed(title="콘 생성 [ 4/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                            embed.add_field(name=f"1. 생성될 콘 이름: ", value=f"{contag.content}{conname.content}", inline=False)
+                            embed.add_field(name="2. 생성할 콘 이미지를 보내주세요.", value="↳ 채팅으로 이미지 보내기", inline=False)
+                            embed.set_footer(text="취소시 ❌, 100x100을 추천합니다.")
+                            msg = await ctx.send(embed=embed)
+                            await msg.add_reaction(deny_emoji)
+                            @client.event
+                            async def on_reaction_add(reaction, user):
+                                if user.bot == 1:
+                                    return None
+                                if str(reaction.emoji) == deny_emoji:
+                                    await msg.delete()
+                                    await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                                    return None
+                            conurl = await client.wait_for("message")
+                            await msg.delete()
+                            image = conurl.attachments[0]
+                            embed.set_image(url=conurl)
+                            embed=discord.Embed(title="콘 생성 [ 5/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                            embed.add_field(name=f"이 이미지로 등록할까요?", value="100x100을 추천합니다.", inline=True)
+                            embed.set_footer(text="결정시 ⭕, 취소시 ❌")
+                            embed.set_image(url=image)
+                            msg = await ctx.send(embed=embed)
+                            await msg.add_reaction(confirm_emoji)
+                            await msg.add_reaction(deny_emoji)
+                            @client.event
+                            async def on_reaction_add(reaction, user):
+                                if user.bot == 1:
+                                    return None
+                                if str(reaction.emoji) == deny_emoji:
+                                    await msg.delete()
+                                    await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                                    return
+                                if str(reaction.emoji) == confirm_emoji:
+                                    await msg.delete()
+                                    embed=discord.Embed(title="최종 미리보기", description=f"{contag.content}{conname.content}", color=0x4ac8c7)
+                                    embed.set_footer(text="결정시 ⭕, 취소시 ❌")
+                                    embed.set_image(url=image)
+                                    preview = await ctx.send(embed=embed)
+                                    await preview.add_reaction(confirm_emoji)
+                                    await preview.add_reaction(deny_emoji)
+                                    @client.event
+                                    async def on_reaction_add(reaction, user):
+                                        if user.bot == 1:
+                                            return None
+                                        if str(reaction.emoji) == deny_emoji:
+                                            await preview.delete()
+                                            await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                                            return
+                                        if str(reaction.emoji) == confirm_emoji:
+                                            await preview.delete()
+                                            await ctx.send(hidden = True, content="최종 등록 기능을 구현중입니다.")
+                                            return
 
-                conurl = await client.wait_for("message")
-                await msg.delete()
-                image = conurl.attachments[0]
-                ctx.send(image)
-                embed=discord.Embed(title="콘 생성 [ 4/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
-                embed.add_field(name=f"이 이미지로 등록할까요?", value="100x100을 추천합니다.", inline=True)
-                embed.set_footer(text="결정시 ⭕, 취소시 ❌")
-                embed.set_image(url=image)
-                msg = await ctx.send(embed=embed)
-                await msg.add_reaction(confirm_emoji)
-                await msg.add_reaction(deny_emoji)
 
-                @client.event
-                async def on_reaction_add(reaction, user):
-                    if user.bot == 1:
-                        return None
-                    if str(reaction.emoji) == confirm_emoji:
-                        await msg.delete()
-                        embed=discord.Embed(title="콘 생성 [ 5/6 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
-                        embed.add_field(name=f"상위 태그 분류에 등록할까요?", value="예) 냥슬픔, 냥경악 ", inline=True)
-                        embed.set_footer(text="등록시 ⭕, 미등록시 ❌")
-                        tagmsg = await ctx.send(embed=embed)
-                        await tagmsg.add_reaction(confirm_emoji)
-                        await tagmsg.add_reaction(deny_emoji)
-                        @client.event
-                        async def on_reaction_add(reaction, user):
-                            if user.bot == 1:
-                                return None
-                            if str(reaction.emoji) == confirm_emoji:
-                                await tagmsg.delete()
-                                await ctx.send(hidden = True, content="기능 구현중입니다.")
-                                return None
-                            if str(reaction.emoji) == deny_emoji:
-                                await tagmsg.delete()
-                                await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
-                                return None
+                
 
-                    if str(reaction.emoji) == deny_emoji:
-                        await msg.delete()
-                        await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
-                        return None
-                    
-                    
+                if str(reaction.emoji) == skip_emoji: # 태그 미등록
+                    await tagmsg.delete()
+                    embed=discord.Embed(title="콘 생성 [ 2/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                    embed.add_field(name="1. 생성할 콘 이름을 보내주세요.", value="↳ 채팅으로 보내기", inline=True)
+                    embed.set_footer(text="취소시 ❌")
+                    msg = await ctx.send(embed=embed)
+                    await msg.add_reaction(deny_emoji)
+                    @client.event
+                    async def on_reaction_add(reaction, user):
+                        if user.bot == 1:
+                            return None
+                        if str(reaction.emoji) == deny_emoji:
+                            await msg.delete()
+                            await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                            return
+                    conname = await client.wait_for("message")
+                    await msg.delete()
+                    embed=discord.Embed(title="콘 생성 [ 3/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                    embed.add_field(name=f"{conname.content}", value=" 으로 등록할까요?", inline=True)
+                    embed.set_footer(text="결정시 ⭕, 취소시 ❌")
+                    name_confirm = await ctx.send(embed=embed)
+                    await name_confirm.add_reaction(confirm_emoji)
+                    await name_confirm.add_reaction(deny_emoji)
+                
+                    @client.event
+                    async def on_reaction_add(reaction, user):
+                        if user.bot == 1:
+                            return None
+                        if str(reaction.emoji) == deny_emoji:
+                            await name_confirm.delete()
+                            await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                            return None
+                        if str(reaction.emoji) == confirm_emoji:
+                            await name_confirm.delete()
+                            embed=discord.Embed(title="콘 생성 [ 4/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                            embed.add_field(name=f"1. 생성될 콘 이름: ", value=f"{conname.content}", inline=False)
+                            embed.add_field(name="2. 생성할 콘 이미지를 보내주세요.", value="↳ 채팅으로 이미지 보내기", inline=False)
+                            embed.set_footer(text="취소시 ❌, 100x100을 추천합니다.")
+                            msg = await ctx.send(embed=embed)
+                            await msg.add_reaction(deny_emoji)
+                            @client.event
+                            async def on_reaction_add(reaction, user):
+                                if user.bot == 1:
+                                    return None
+                                if str(reaction.emoji) == deny_emoji:
+                                    await msg.delete()
+                                    await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                                    return None
+                            conurl = await client.wait_for("message")
+                            await msg.delete()
+                            image = conurl.attachments[0]
+                            embed.set_image(url=conurl)
+                            embed=discord.Embed(title="콘 생성 [ 5/7 ]", description="￣￣￣￣￣￣￣￣￣￣￣￣￣￣", color=0x4ac8c7)
+                            embed.add_field(name=f"이 이미지로 등록할까요?", value="100x100을 추천합니다.", inline=True)
+                            embed.set_footer(text="결정시 ⭕, 취소시 ❌")
+                            embed.set_image(url=image)
+                            msg = await ctx.send(embed=embed)
+                            await msg.add_reaction(confirm_emoji)
+                            await msg.add_reaction(deny_emoji)
+                            @client.event
+                            async def on_reaction_add(reaction, user):
+                                if user.bot == 1:
+                                    return None
+                                if str(reaction.emoji) == deny_emoji:
+                                    await msg.delete()
+                                    await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                                    return
+                                if str(reaction.emoji) == confirm_emoji:
+                                    await msg.delete()
+                                    embed=discord.Embed(title="최종 미리보기", description=f"{conname.content}", color=0x4ac8c7)
+                                    embed.set_footer(text="결정시 ⭕, 취소시 ❌")
+                                    embed.set_image(url=image)
+                                    preview = await ctx.send(embed=embed)
+                                    await preview.add_reaction(confirm_emoji)
+                                    await preview.add_reaction(deny_emoji)
+                                    @client.event
+                                    async def on_reaction_add(reaction, user):
+                                        if user.bot == 1:
+                                            return None
+                                        if str(reaction.emoji) == deny_emoji:
+                                            await preview.delete()
+                                            await ctx.send(hidden = True, content="콘 생성이 취소되었습니다.")
+                                            return
+                                        if str(reaction.emoji) == confirm_emoji:
+                                            await preview.delete()
+                                            await ctx.send(hidden = True, content="최종 등록 기능을 구현중입니다.")
+                                            return
+
+
+
 
 
         elif 작업 == "Edit":
