@@ -10,7 +10,7 @@ import re
 import asyncio
 import os
 
-client = discord.Client(intents=discord.Intents.all()), activity = discord.Game(name="명령어마다 파일 배정 코딩")
+client = discord.Client(intents=discord.Intents.all(), activity = discord.Game(name="명령어마다 파일 배정 코딩"))
 slash = SlashCommand(client, sync_commands=True)
 
 @client.event
