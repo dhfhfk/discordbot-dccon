@@ -1,1 +1,3 @@
 automatic/
+cogs/__pycache__ 
+*.pyc
