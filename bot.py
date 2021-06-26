@@ -64,16 +64,64 @@ if __name__ == '__main__':
                     required=True,
                     choices=[
                         create_choice(
-                            name="ping",
-                            value="ping"
+                            name="냥",
+                            value="냥"
+                        ),
+                        create_choice(
+                            name="둘리",
+                            value="둘리"
+                        ),
+                        create_choice(
+                            name="레식",
+                            value="레식"
+                        ),
+                        create_choice(
+                            name="로고",
+                            value="로고"
+                        ),
+                        create_choice(
+                            name="믿거",
+                            value="믿거"
+                        ),
+                        create_choice(
+                            name="사수",
+                            value="사수"
+                        ),
+                        create_choice(
+                            name="앵무",
+                            value="앵무"
+                        ),
+                        create_choice(
+                            name="에펙",
+                            value="에펙"
+                        ),
+                        create_choice(
+                            name="우리핵",
+                            value="우리핵"
+                        ),
+                        create_choice(
+                            name="제리",
+                            value="제리"
+                        ),
+                        create_choice(
+                            name="컴붕",
+                            value="컴붕"
                         ),
                         create_choice(
                             name="콘관리",
                             value="콘관리"
                         ),
                         create_choice(
-                            name="우리핵",
-                            value="우리핵"
+                            name="특",
+                            value="특"
+                        ),
+                        create_choice(
+                            name="프붕",
+                            value="프붕"
+                        ),
+                        create_choice(
+                            name="RGB",
+                            value="RGB"
                         )
                     ]
                 )
