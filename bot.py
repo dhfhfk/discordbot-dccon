@@ -1,7 +1,13 @@
 from discord_slash.utils.manage_commands import create_option, create_choice
 import discord
+from discord.ext.commands import Bot
+from discord.ext import commands
 from discord_slash import SlashCommand
+from discord_slash import cog_ext
 from discord import DMChannel
+import datetime
+import re
+import asyncio
 import os
 
 client = discord.Client(intents=discord.Intents.all()), activity = discord.Game(name="명령어마다 파일 배정 코딩")
