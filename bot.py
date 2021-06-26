@@ -17,8 +17,7 @@ slash = SlashCommand(client, sync_commands=True)
 async def on_ready():
     print("준비된!")
 
-victim_id = (int(595824909473808403))
-guild_ids = [victim_id]
+guild_ids = [int(os.environ['guild_id'])]
 
 confirm_emoji = '\N{Heavy Large Circle}'
 deny_emoji = '\N{Cross Mark}'
