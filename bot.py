@@ -4,7 +4,7 @@ from discord_slash import SlashCommand
 from discord import DMChannel
 import os
 
-client = discord.Client(intents=discord.Intents.all())
+client = discord.Client(intents=discord.Intents.all()), activity = discord.Game(name="명령어마다 파일 배정 코딩")
 slash = SlashCommand(client, sync_commands=True)
 
 @client.event
