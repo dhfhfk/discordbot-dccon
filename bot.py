@@ -10,7 +10,7 @@ import re
 import asyncio
 import os
 
-client = Bot(command_prefix = "prefix", intents=discord.Intents.all(), activity = discord.Game(name="새로운기능 코딩"))
+client = Bot(command_prefix = "prefix", intents=discord.Intents.all(), activity = discord.Game(name="'/명령어' 추가"))
 slash = SlashCommand(client, sync_commands=True, sync_on_cog_reload=True, override_type=True)
 
 @client.event
