@@ -87,38 +87,38 @@ async def cogs_m(ctx, 작업: str, 명령어: str):
             timestamp = datetime.datetime.now(datetime.timezone.utc)
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"{작업}: Cogs.{명령어}", color=embed_color)
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🟢 | 정상적으로 활성화했어요!", inline=False)
             embed.set_footer(text=timestamp.astimezone().strftime('%Y-%m-%d %H:%M:%S'))
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.ExtensionNotFound as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 찾을 수 없습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.ExtensionAlreadyLoaded as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 이미 로드되어있습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.NoEntryPointError as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 파일에 setup point가 존재하지 않습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.ExtensionFailed as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 불러오는데에 실패했습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
             
             
     elif 작업 == "unload":
@@ -128,25 +128,25 @@ async def cogs_m(ctx, 작업: str, 명령어: str):
             timestamp = datetime.datetime.now(datetime.timezone.utc)
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"{작업}: Cogs.{명령어}", color=embed_color)
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🟢 | 정상적으로 비활성화했어요!", inline=False)
             embed.set_footer(text=timestamp.astimezone().strftime('%Y-%m-%d %H:%M:%S'))
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
             return
         except commands.ExtensionNotFound as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 찾을 수 없습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.ExtensionNotLoaded as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 이미 비활성화 되어있습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
     elif 작업 == "reload":
         try:
             client.reload_extension(f'cogs.{명령어}')
@@ -154,38 +154,38 @@ async def cogs_m(ctx, 작업: str, 명령어: str):
             timestamp = datetime.datetime.now(datetime.timezone.utc)
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"{작업}: Cogs.{명령어}", color=embed_color)
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🟢 | 정상적으로 재시작했어요!", inline=False)
             embed.set_footer(text=timestamp.astimezone().strftime('%Y-%m-%d %H:%M:%S'))
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.ExtensionNotLoaded as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 로드되어있지 않습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.ExtensionNotFound as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 찾을 수 없습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.NoEntryPointError as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 파일에 setup point가 존재하지 않습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         except commands.ExtensionFailed as e:
             print(f'🔴 | "{작업}: Cogs.{명령어}" | {ctx.author.name}: {e}')
             url = ctx.author.avatar_url
             embed=discord.Embed(title=f"⁉ {작업}: Cogs.{명령어}")
-            embed.set_author(name=f"{ctx.author.name}", icon_url=url)
+            embed.set_author(name=f"{ctx.author.name}")
             embed.add_field(name="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣", value="🔴 | 에러: 불러오는데에 실패했습니다!", inline=False)
-            await ctx.send(hidden = True, embed=embed)
+            await ctx.send(embed=embed, delete_after=5.0)
         
 @slash.slash(name="고티", description=" ", guild_ids=guild_ids)
 async def 고티(ctx):
