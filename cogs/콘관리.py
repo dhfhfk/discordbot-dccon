@@ -8,7 +8,7 @@ import re
 import asyncio
 import os
 
-guild_ids = [367303729566711808]
+guild_ids = [int(os.environ['guild_id'])]
 
 client = discord.Client(intents=discord.Intents.all())
 slash = SlashCommand(client, sync_commands=True)

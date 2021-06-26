@@ -9,7 +9,7 @@ import asyncio
 import os
 
 
-guild_ids = [367303729566711808]
+guild_ids = [int(os.environ['guild_id'])]
 embed_color = 0x4ac8c7
 
 class 레식(commands.Cog):
